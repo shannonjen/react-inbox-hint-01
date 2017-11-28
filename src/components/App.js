@@ -10,9 +10,10 @@ class App extends Component {
     this.state = { messages: props.messages }
   }
 
-
   toggleStar = (message) => {
-    console.log("This is the message: ", message)
+
+    //insert code here!
+    
   }
 
   render() {
@@ -31,13 +32,8 @@ class App extends Component {
             </div>
           </div>
         </div>
-
         <div className="container">
-
-          <Messages
-            messages={this.state.messages}
-            toggleStar={this.toggleStar}
-            />
+          <Messages messages={this.state.messages} toggleStar={this.toggleStar}/>
         </div>
       </div>
     );

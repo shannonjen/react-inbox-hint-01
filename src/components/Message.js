@@ -1,13 +1,7 @@
 import React from 'react'
 
-const Message = ({
-  message,
-  toggleStar,
-}) => {
-
+const Message = ({message, toggleStar}) => {
   const starClass = message.starred ? 'fa-star' : 'fa-star-o'
-
-
 
   const starMessage = (e) => {
     e.stopPropagation()
@@ -19,10 +13,7 @@ const Message = ({
       <div className="col-xs-1">
         <div className="row">
           <div className="col-xs-2">
-            <input
-              type="checkbox"
-
-              />
+            <input type="checkbox"/>
           </div>
           <div className="star-container col-xs-2" onClick={ starMessage }>
             <i className={`star fa ${starClass}`}></i>
