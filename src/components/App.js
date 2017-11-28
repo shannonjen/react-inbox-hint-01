@@ -17,8 +17,11 @@ class App extends Component {
     this.setState({messages: messages})
   }
 
-  toggleSelect(message) {
-    //code goes here!
+  toggleSelect = (message) => {
+    const messages = this.state.messages.slice()
+    const index = this.state.messages.indexOf(message)
+    messages[index].selected = !messages[index].selected
+    this.setState({messages: messages})
   }
 
   render() {
@@ -38,7 +41,7 @@ class App extends Component {
           </div>
         </div>
         <div className="container">
-          <Messages messages={this.state.messages} toggleStar={this.toggleStar}/>
+          <Messages messages={this.state.messages} toggleStar={this.toggleStar} toggleSelect={this.toggleSelect}/>
         </div>
       </div>
     );
