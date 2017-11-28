@@ -11,9 +11,14 @@ class App extends Component {
   }
 
   toggleStar = (message) => {
+    const messages = this.state.messages.slice()
+    const index = this.state.messages.indexOf(message)
+    messages[index].starred = !messages[index].starred
+    this.setState({messages: messages})
+  }
 
-    //insert code here!
-    
+  toggleSelect(message) {
+    //code goes here!
   }
 
   render() {
